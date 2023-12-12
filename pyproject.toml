@@ -4,6 +4,10 @@ version = "0.1.0"
 description = "Difference generator is a program which defines the differnce between two data structures."
 authors = ["Anastasiia Nezgovorova <odabcrfake@gmail.com>"]
 readme = "README.md"
+packages = [
+  { include = "gendiff" },
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -18,3 +22,4 @@ gendiff = "gendiff.scripts.gendiff:main"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
