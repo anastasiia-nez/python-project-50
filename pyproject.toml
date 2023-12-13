@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Difference generator is a program which defines the differnce between two data structures."
+description = "Difference generator is a program which defines the difference between two data structures."
 authors = ["Anastasiia Nezgovorova <odabcrfake@gmail.com>"]
 readme = "README.md"
 packages = [
