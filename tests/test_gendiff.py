@@ -4,8 +4,8 @@ from gendiff.gendiff import generate_diff
 
 FIRST_FILE_PATH_FOR_FLAT = 'tests/fixtures/json/file1.json'
 SECOND_FILE_PATH_FOR_FLAT = 'tests/fixtures/json/file2.json'
-HELP = 'tests/fixtures/cli_help.txt'
-flat_diff_json_1_result = 'tests/fixtures/flat_diff_json_1.txt'
+HELP = 'tests/fixtures/results/cli_help.txt'
+flat_diff_json_1_result = 'tests/fixtures/results/flat_diff_json_1.txt'
 
 
 def test_help_message():
@@ -20,5 +20,4 @@ def test_generate_diff():
     with open(flat_diff_json_1_result) as file:
         expected_result = file.read()
         assert generate_diff(FIRST_FILE_PATH_FOR_FLAT, SECOND_FILE_PATH_FOR_FLAT) == expected_result
-
     
