@@ -20,4 +20,3 @@ def test_generate_diff():
     with open(flat_diff_json_1_result) as file:
         expected_result = file.read()
         assert generate_diff(FIRST_FILE_PATH_FOR_FLAT, SECOND_FILE_PATH_FOR_FLAT) == expected_result
-    
