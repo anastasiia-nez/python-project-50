@@ -1,11 +1,13 @@
 import subprocess
 from gendiff.gendiff import generate_diff
 
-
-FIRST_FILE_PATH_FOR_FLAT = 'tests/fixtures/json/file1.json'
-SECOND_FILE_PATH_FOR_FLAT = 'tests/fixtures/json/file2.json'
 HELP = 'tests/fixtures/results/cli_help.txt'
-flat_diff_json_1_result = 'tests/fixtures/results/flat_diff_json_1.txt'
+FIRST_PATH_FOR_FLAT_JSON_1 = 'tests/fixtures/json/flat1_1.json'
+SECOND_PATH_FOR_FLAT_JSON_1 = 'tests/fixtures/json/flat1_2.json'
+FLAT_JSON_RESULT_1 = 'tests/fixtures/results/flat_json_1.txt'
+FIRST_PATH_FOR_FLAT_YAML_1 = 'tests/fixtures/yaml/flat1_1.yml'
+SECOND_PATH_FOR_FLAT_YAML_1 = 'tests/fixtures/yaml/flat1_2.yml'
+FLAT_YAML_RESULT_1 = 'tests/fixtures/results/flat_yaml_1.txt'
 
 
 def test_help_message():
@@ -17,6 +19,9 @@ def test_help_message():
 
 
 def test_generate_diff():
-    with open(flat_diff_json_1_result) as file:
+    with open(FLAT_JSON_RESULT_1) as file:
         expected_result = file.read()
-        assert generate_diff(FIRST_FILE_PATH_FOR_FLAT, SECOND_FILE_PATH_FOR_FLAT) == expected_result
+        assert generate_diff(FIRST_PATH_FOR_FLAT_JSON_1, SECOND_PATH_FOR_FLAT_JSON_1) == expected_result
+    with open(FLAT_YAML_RESULT_1) as file:
+        expected_result = file.read()
+        assert generate_diff(FIRST_PATH_FOR_FLAT_YAML_1, SECOND_PATH_FOR_FLAT_YAML_1) == expected_result
