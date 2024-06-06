@@ -18,7 +18,7 @@ test-coverage:
 
 check: selfcheck test lint
 
-build:	check
+build:	selfcheck lint
 	poetry build
 
 publish:
